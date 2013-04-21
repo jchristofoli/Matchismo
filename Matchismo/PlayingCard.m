@@ -30,7 +30,7 @@
 
 - (void) setRank:(NSUInteger)rank
 {
-    if (rank <= [PlayingCard maxRank])
+    if (rank <= [[self class] maxRank])
     {
         _rank = rank;
     }
@@ -38,12 +38,12 @@
 
 - (NSString *) contents
 {
-    return [[PlayingCard rankStrings] [self.rank] stringByAppendingString:self.suit];
+    return [[[self class] rankStrings] [self.rank] stringByAppendingString:self.suit];
 }
 
 - (void) setSuit:(NSString *)suit
 {
-    if ([[PlayingCard validSuits] containsObject:suit])
+    if ([[[self class] validSuits] containsObject:suit])
     {
         _suit = suit;
     }
