@@ -39,6 +39,14 @@
 		60FD4EE9172467E700DB4D5F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		60FD4EEB172467E700DB4D5F /* CardGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardGameViewController.h; sourceTree = "<group>"; };
 		60FD4EEC172467E700DB4D5F /* CardGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardGameViewController.m; sourceTree = "<group>"; };
+		60FD4EF417246CA600DB4D5F /* Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		60FD4EF517246CA600DB4D5F /* Card.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		60FD4EF617246CA600DB4D5F /* Deck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		60FD4EF717246CA600DB4D5F /* Deck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		60FD4EF817246CA600DB4D5F /* PlayingCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingCard.h; sourceTree = "<group>"; };
+		60FD4EF917246CA600DB4D5F /* PlayingCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayingCard.m; sourceTree = "<group>"; };
+		60FD4EFA17246CA600DB4D5F /* PlayingCardDeck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingCardDeck.h; sourceTree = "<group>"; };
+		60FD4EFB17246CA600DB4D5F /* PlayingCardDeck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +93,7 @@
 		60FD4ED3172467E700DB4D5F /* Matchismo */ = {
 			isa = PBXGroup;
 			children = (
-				60FD4EDC172467E700DB4D5F /* CardGameAppDelegate.h */,
-				60FD4EDD172467E700DB4D5F /* CardGameAppDelegate.m */,
+				60FD4EF317246C4000DB4D5F /* Model */,
 				60FD4EE5172467E700DB4D5F /* MainStoryboard_iPhone.storyboard */,
 				60FD4EE8172467E700DB4D5F /* MainStoryboard_iPad.storyboard */,
 				60FD4EEB172467E700DB4D5F /* CardGameViewController.h */,
@@ -99,6 +106,8 @@
 		60FD4ED4172467E700DB4D5F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				60FD4EDC172467E700DB4D5F /* CardGameAppDelegate.h */,
+				60FD4EDD172467E700DB4D5F /* CardGameAppDelegate.m */,
 				60FD4ED5172467E700DB4D5F /* Matchismo-Info.plist */,
 				60FD4ED6172467E700DB4D5F /* InfoPlist.strings */,
 				60FD4ED9172467E700DB4D5F /* main.m */,
@@ -108,6 +117,21 @@
 				60FD4EE3172467E700DB4D5F /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60FD4EF317246C4000DB4D5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60FD4EF417246CA600DB4D5F /* Card.h */,
+				60FD4EF517246CA600DB4D5F /* Card.m */,
+				60FD4EF617246CA600DB4D5F /* Deck.h */,
+				60FD4EF717246CA600DB4D5F /* Deck.m */,
+				60FD4EF817246CA600DB4D5F /* PlayingCard.h */,
+				60FD4EF917246CA600DB4D5F /* PlayingCard.m */,
+				60FD4EFA17246CA600DB4D5F /* PlayingCardDeck.h */,
+				60FD4EFB17246CA600DB4D5F /* PlayingCardDeck.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
