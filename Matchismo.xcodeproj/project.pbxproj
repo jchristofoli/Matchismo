@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6048E19317321C38000A0A30 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD4EF517246CA600DB4D5F /* Card.m */; };
+		6048E19517321C38000A0A30 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD4EF717246CA600DB4D5F /* Deck.m */; };
+		6048E19717321C38000A0A30 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD4EF917246CA600DB4D5F /* PlayingCard.m */; };
+		6048E19917321C38000A0A30 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD4EFB17246CA600DB4D5F /* PlayingCardDeck.m */; };
 		60FD4ECE172467E700DB4D5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FD4ECD172467E700DB4D5F /* UIKit.framework */; };
 		60FD4ED0172467E700DB4D5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FD4ECF172467E700DB4D5F /* Foundation.framework */; };
 		60FD4ED2172467E700DB4D5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FD4ED1172467E700DB4D5F /* CoreGraphics.framework */; };
@@ -93,11 +97,11 @@
 		60FD4ED3172467E700DB4D5F /* Matchismo */ = {
 			isa = PBXGroup;
 			children = (
+				60FD4EEB172467E700DB4D5F /* CardGameViewController.h */,
+				60FD4EEC172467E700DB4D5F /* CardGameViewController.m */,
 				60FD4EF317246C4000DB4D5F /* Model */,
 				60FD4EE5172467E700DB4D5F /* MainStoryboard_iPhone.storyboard */,
 				60FD4EE8172467E700DB4D5F /* MainStoryboard_iPad.storyboard */,
-				60FD4EEB172467E700DB4D5F /* CardGameViewController.h */,
-				60FD4EEC172467E700DB4D5F /* CardGameViewController.m */,
 				60FD4ED4172467E700DB4D5F /* Supporting Files */,
 			);
 			path = Matchismo;
@@ -202,6 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6048E19317321C38000A0A30 /* Card.m in Sources */,
+				6048E19517321C38000A0A30 /* Deck.m in Sources */,
+				6048E19717321C38000A0A30 /* PlayingCard.m in Sources */,
+				6048E19917321C38000A0A30 /* PlayingCardDeck.m in Sources */,
 				60FD4EDA172467E700DB4D5F /* main.m in Sources */,
 				60FD4EDE172467E700DB4D5F /* CardGameAppDelegate.m in Sources */,
 				60FD4EED172467E700DB4D5F /* CardGameViewController.m in Sources */,
@@ -337,6 +345,7 @@
 				60FD4EF2172467E700DB4D5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

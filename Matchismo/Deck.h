@@ -6,9 +6,8 @@
 //  Copyright (c) 2013 Floyd Christofoli. All rights reserved.
 //
 
-@class Card;
-
 #import <Foundation/Foundation.h>
+#import "Card.h"
 
 @interface Deck : NSObject
 

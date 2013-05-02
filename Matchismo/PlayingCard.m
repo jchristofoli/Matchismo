@@ -54,4 +54,9 @@
     return _suit ? _suit : @"?";
 }
 
+- (NSString *) description
+{
+    return self.contents;
+}
+
 @end

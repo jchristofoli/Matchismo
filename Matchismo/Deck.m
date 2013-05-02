@@ -17,12 +17,9 @@
 
 @implementation Deck
 
-@synthesize cards = _cards;
-
-- (NSMutableArray *) getCards
+- (NSMutableArray *) cards
 {
-    if (_cards == nil)
-        _cards = [[NSMutableArray alloc] init];
+    if (!_cards) _cards = [[NSMutableArray alloc] init];
 
     return _cards;
 }
