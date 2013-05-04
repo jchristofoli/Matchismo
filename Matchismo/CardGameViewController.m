@@ -10,7 +10,7 @@
 #import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
 
-#define CARD_BACK_IMAGE (@"volition-company-logo.jpg")
+#define CARD_BACK_IMAGE (@"card_back_red.jpg")
 
 @interface CardGameViewController ()
 

@@ -12,8 +12,9 @@
 		60C59F4B17334ACF00779C8D /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C59F4517334ACF00779C8D /* Deck.m */; };
 		60C59F4C17334ACF00779C8D /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C59F4717334ACF00779C8D /* PlayingCard.m */; };
 		60C59F4D17334ACF00779C8D /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C59F4917334ACF00779C8D /* PlayingCardDeck.m */; };
-		60D472BA1734C95D009F0356 /* volition-company-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60D472B91734C95D009F0356 /* volition-company-logo.jpg */; };
 		60D472C017357FB7009F0356 /* CardMatchingGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D472BF17357FB7009F0356 /* CardMatchingGameState.m */; };
+		60D472C21735CD47009F0356 /* card_back_red.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60D472C11735CD47009F0356 /* card_back_red.jpg */; };
+		60D472C51735CD8C009F0356 /* MainStoryboard_iPhone in Resources */ = {isa = PBXBuildFile; fileRef = 60D472C31735CD8C009F0356 /* MainStoryboard_iPhone */; };
 		60FD4ECE172467E700DB4D5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FD4ECD172467E700DB4D5F /* UIKit.framework */; };
 		60FD4ED0172467E700DB4D5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FD4ECF172467E700DB4D5F /* Foundation.framework */; };
 		60FD4ED2172467E700DB4D5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FD4ED1172467E700DB4D5F /* CoreGraphics.framework */; };
@@ -38,9 +39,10 @@
 		60C59F4717334ACF00779C8D /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCard.m; path = Model/PlayingCard.m; sourceTree = "<group>"; };
 		60C59F4817334ACF00779C8D /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Model/PlayingCardDeck.h; sourceTree = "<group>"; };
 		60C59F4917334ACF00779C8D /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Model/PlayingCardDeck.m; sourceTree = "<group>"; };
-		60D472B91734C95D009F0356 /* volition-company-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "volition-company-logo.jpg"; sourceTree = "<group>"; };
 		60D472BE17357FB7009F0356 /* CardMatchingGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGameState.h; path = Model/CardMatchingGameState.h; sourceTree = "<group>"; };
 		60D472BF17357FB7009F0356 /* CardMatchingGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGameState.m; path = Model/CardMatchingGameState.m; sourceTree = "<group>"; };
+		60D472C11735CD47009F0356 /* card_back_red.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = card_back_red.jpg; sourceTree = "<group>"; };
+		60D472C41735CD8C009F0356 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = Matchismo/en.lproj/MainStoryboard_iPhone; sourceTree = "<group>"; };
 		60FD4ECA172467E700DB4D5F /* Matchismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60FD4ECD172467E700DB4D5F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		60FD4ECF172467E700DB4D5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -76,6 +78,7 @@
 		60FD4EC1172467E700DB4D5F = {
 			isa = PBXGroup;
 			children = (
+				60D472C31735CD8C009F0356 /* MainStoryboard_iPhone */,
 				60FD4ED3172467E700DB4D5F /* Matchismo */,
 				60FD4ECC172467E700DB4D5F /* Frameworks */,
 				60FD4ECB172467E700DB4D5F /* Products */,
@@ -115,7 +118,7 @@
 		60FD4ED4172467E700DB4D5F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				60D472B91734C95D009F0356 /* volition-company-logo.jpg */,
+				60D472C11735CD47009F0356 /* card_back_red.jpg */,
 				60FD4EDC172467E700DB4D5F /* CardGameAppDelegate.h */,
 				60FD4EDD172467E700DB4D5F /* CardGameAppDelegate.m */,
 				60FD4ED5172467E700DB4D5F /* Matchismo-Info.plist */,
@@ -205,7 +208,8 @@
 				60FD4EE2172467E700DB4D5F /* Default@2x.png in Resources */,
 				60FD4EE4172467E700DB4D5F /* Default-568h@2x.png in Resources */,
 				60FD4EE7172467E700DB4D5F /* MainStoryboard_iPhone.storyboard in Resources */,
-				60D472BA1734C95D009F0356 /* volition-company-logo.jpg in Resources */,
+				60D472C21735CD47009F0356 /* card_back_red.jpg in Resources */,
+				60D472C51735CD8C009F0356 /* MainStoryboard_iPhone in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +235,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		60D472C31735CD8C009F0356 /* MainStoryboard_iPhone */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60D472C41735CD8C009F0356 /* en */,
+			);
+			name = MainStoryboard_iPhone;
+			sourceTree = "<group>";
+		};
 		60FD4ED6172467E700DB4D5F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
