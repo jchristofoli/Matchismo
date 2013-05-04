@@ -10,6 +10,8 @@
 #import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
 
+#define CARD_BACK_IMAGE (@"volition-company-logo.jpg")
+
 @interface CardGameViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
@@ -56,6 +58,7 @@
         cardButton.selected = card.isFaceUp;
         cardButton.enabled = !card.isUnplayable;
         cardButton.alpha = card.isUnplayable ? 0.3 : 1.0;
+        [cardButton setImage:card.isFaceUp ? nil:[UIImage imageNamed:CARD_BACK_IMAGE] forState:UIControlStateNormal];
     }
 
     switch (self.game.lastFlipResult) {
