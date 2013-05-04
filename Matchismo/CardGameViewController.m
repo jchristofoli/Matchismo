@@ -56,10 +56,10 @@
             self.resultsLabel.text = [NSString stringWithFormat:@"Flipped up %@", self.game.lastPlayedCards[0]];
             break;
         case CARD_MATCHING_GAME_STATUS_MISMATCH:
-            self.resultsLabel.text = [NSString stringWithFormat:@"%@ and %@ don't match! %d point penalty!", self.game.lastPlayedCards[0], self.game.lastPlayedCards[1], self.game.lastFlipScore];
+            self.resultsLabel.text = [NSString stringWithFormat:@"%@ don't match! %d point penalty!", [self.game.lastPlayedCards componentsJoinedByString:@" and "], self.game.lastFlipScore];
             break;
         case CARD_MATCHING_GAME_STATUS_MATCH:
-            self.resultsLabel.text = [NSString stringWithFormat:@"Matched %@ and %@ for %d points", self.game.lastPlayedCards[0], self.game.lastPlayedCards[1], self.game.lastFlipScore];
+            self.resultsLabel.text = [NSString stringWithFormat:@"Matched %@ for %d points", [self.game.lastPlayedCards componentsJoinedByString:@" and "], self.game.lastFlipScore];
             break;
         default:
             self.resultsLabel.text = @"Time to match some cards!";
