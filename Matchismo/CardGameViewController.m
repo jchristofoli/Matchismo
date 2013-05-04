@@ -15,12 +15,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *resultsLabel;
+@property (weak, nonatomic) IBOutlet UIButton *dealButton;
 @property (nonatomic) int flipCount;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (strong, nonatomic) CardMatchingGame *game;
 @end
 
 @implementation CardGameViewController
+
+- (void)resetGame
+{
+    self.flipCount = 0;
+    _game = nil;
+}
 
 - (CardMatchingGame *)game
 {
@@ -82,5 +89,10 @@
     [self updateUI];
 }
 
+- (IBAction)dealButtonTapped:(id)sender
+{
+    [self resetGame];
+    [self updateUI];
+}
 
 @end
