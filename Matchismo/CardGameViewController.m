@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *resultsLabel;
 @property (nonatomic) int flipCount;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (strong, nonatomic) CardMatchingGame *game;
@@ -28,10 +29,14 @@
     return _game;
 }
 
+- (void) viewDidAppear:(BOOL)animated
+{
+    [self updateUI];
+}
+
 - (void)setCardButtons:(NSArray *)cardButtons
 {
     _cardButtons = cardButtons;
-    [self updateUI];
 }
 
 - (void)updateUI
@@ -45,7 +50,22 @@
         cardButton.enabled = !card.isUnplayable;
         cardButton.alpha = card.isUnplayable ? 0.3 : 1.0;
     }
-    
+
+    switch (self.game.lastFlipResult) {
+        case CARD_MATCHING_GAME_STATUS_FLIPPED:
+            self.resultsLabel.text = [NSString stringWithFormat:@"Flipped up %@", self.game.lastPlayedCards[0]];
+            break;
+        case CARD_MATCHING_GAME_STATUS_MISMATCH:
+            self.resultsLabel.text = [NSString stringWithFormat:@"%@ and %@ don't match! %d point penalty!", self.game.lastPlayedCards[0], self.game.lastPlayedCards[1], self.game.lastFlipScore];
+            break;
+        case CARD_MATCHING_GAME_STATUS_MATCH:
+            self.resultsLabel.text = [NSString stringWithFormat:@"Matched %@ and %@ for %d points", self.game.lastPlayedCards[0], self.game.lastPlayedCards[1], self.game.lastFlipScore];
+            break;
+        default:
+            self.resultsLabel.text = @"Time to match some cards!";
+            break;
+    }
+
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
 }
 
