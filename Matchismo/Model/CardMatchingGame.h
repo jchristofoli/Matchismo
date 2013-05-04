@@ -8,14 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Deck.h"
-
-typedef enum
-{
-    CARD_MATCHING_GAME_STATUS_INVALID = -1,
-    CARD_MATCHING_GAME_STATUS_FLIPPED,
-    CARD_MATCHING_GAME_STATUS_MATCH,
-    CARD_MATCHING_GAME_STATUS_MISMATCH
-} CardMatchingGameFlipResult;
+#import "CardMatchingGameState.h"
 
 @interface CardMatchingGame : NSObject
 
@@ -26,6 +19,8 @@ typedef enum
 @property (nonatomic, readonly) int score;
 @property (nonatomic, readonly) int lastFlipScore;
 @property (nonatomic, readonly) CardMatchingGameFlipResult lastFlipResult;
-@property (nonatomic, retain, readonly) NSArray* lastPlayedCards;
+@property (nonatomic, readonly) NSArray* lastPlayedCards;
+@property (nonatomic, readonly) int historyLocation;
+@property (nonatomic, readonly) int numFlips;
 
 @end

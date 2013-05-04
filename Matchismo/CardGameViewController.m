@@ -18,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *resultsLabel;
 @property (weak, nonatomic) IBOutlet UIButton *dealButton;
-@property (nonatomic) int flipCount;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (strong, nonatomic) CardMatchingGame *game;
 @end
@@ -27,7 +26,6 @@
 
 - (void)resetGame
 {
-    self.flipCount = 0;
     _game = nil;
 }
 
@@ -56,7 +54,7 @@
         [cardButton setTitle:card.contents forState:UIControlStateSelected];
         [cardButton setTitle:card.contents forState:UIControlStateSelected|UIControlStateDisabled];
         cardButton.selected = card.isFaceUp;
-        cardButton.enabled = !card.isUnplayable;
+        cardButton.enabled = !card.isUnplayable && !card.isFaceUp;
         cardButton.alpha = card.isUnplayable ? 0.3 : 1.0;
         [cardButton setImage:card.isFaceUp ? nil:[UIImage imageNamed:CARD_BACK_IMAGE] forState:UIControlStateNormal];
     }
@@ -77,18 +75,12 @@
     }
 
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
-    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
-}
-
-- (void)setFlipCount:(int)flipCount
-{
-    _flipCount = flipCount;
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.game.numFlips];
 }
 
 - (IBAction)flipCard:(UIButton *)sender
 {
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
-    self.flipCount++;
     [self updateUI];
 }
 

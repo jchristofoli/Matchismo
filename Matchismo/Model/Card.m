@@ -8,7 +8,19 @@
 
 #import "Card.h"
 
+@interface Card()
+@end
+
+
 @implementation Card
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    Card *card = [[[self class] allocWithZone:zone] init];
+    card.faceUp = self.isFaceUp;
+    card.unplayable = self.isUnplayable;
+    return card;
+}
 
 - (BOOL) isFaceUp
 {
@@ -33,5 +45,6 @@
     }
     return score;
 }
+
 
 @end

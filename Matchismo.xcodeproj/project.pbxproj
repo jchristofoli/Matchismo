@@ -13,6 +13,7 @@
 		60C59F4C17334ACF00779C8D /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C59F4717334ACF00779C8D /* PlayingCard.m */; };
 		60C59F4D17334ACF00779C8D /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C59F4917334ACF00779C8D /* PlayingCardDeck.m */; };
 		60D472BA1734C95D009F0356 /* volition-company-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60D472B91734C95D009F0356 /* volition-company-logo.jpg */; };
+		60D472C017357FB7009F0356 /* CardMatchingGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D472BF17357FB7009F0356 /* CardMatchingGameState.m */; };
 		60FD4ECE172467E700DB4D5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FD4ECD172467E700DB4D5F /* UIKit.framework */; };
 		60FD4ED0172467E700DB4D5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FD4ECF172467E700DB4D5F /* Foundation.framework */; };
 		60FD4ED2172467E700DB4D5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FD4ED1172467E700DB4D5F /* CoreGraphics.framework */; };
@@ -38,6 +39,8 @@
 		60C59F4817334ACF00779C8D /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Model/PlayingCardDeck.h; sourceTree = "<group>"; };
 		60C59F4917334ACF00779C8D /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Model/PlayingCardDeck.m; sourceTree = "<group>"; };
 		60D472B91734C95D009F0356 /* volition-company-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "volition-company-logo.jpg"; sourceTree = "<group>"; };
+		60D472BE17357FB7009F0356 /* CardMatchingGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGameState.h; path = Model/CardMatchingGameState.h; sourceTree = "<group>"; };
+		60D472BF17357FB7009F0356 /* CardMatchingGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGameState.m; path = Model/CardMatchingGameState.m; sourceTree = "<group>"; };
 		60FD4ECA172467E700DB4D5F /* Matchismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60FD4ECD172467E700DB4D5F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		60FD4ECF172467E700DB4D5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -139,6 +142,8 @@
 				60C59F4917334ACF00779C8D /* PlayingCardDeck.m */,
 				60C59F3F17334A7C00779C8D /* CardMatchingGame.h */,
 				60C59F4017334A7C00779C8D /* CardMatchingGame.m */,
+				60D472BE17357FB7009F0356 /* CardMatchingGameState.h */,
+				60D472BF17357FB7009F0356 /* CardMatchingGameState.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 				60C59F4B17334ACF00779C8D /* Deck.m in Sources */,
 				60C59F4C17334ACF00779C8D /* PlayingCard.m in Sources */,
 				60C59F4D17334ACF00779C8D /* PlayingCardDeck.m in Sources */,
+				60D472C017357FB7009F0356 /* CardMatchingGameState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

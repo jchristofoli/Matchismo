@@ -28,6 +28,13 @@
     return [self rankStrings].count - 1;
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    PlayingCard *playingCard = [super copyWithZone:zone];
+    playingCard->_suit = [self.suit copyWithZone:zone];
+    playingCard->_rank = self.rank;
+    return playingCard;
+}
+
 - (void) setRank:(NSUInteger)rank
 {
     if (rank <= [[self class] maxRank])

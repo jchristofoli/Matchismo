@@ -264,25 +264,22 @@
                         <outlet property="flipsLabel" destination="hWf-Po-WgD" id="9OW-1U-Pqd"/>
                         <outlet property="resultsLabel" destination="McQ-0O-e2i" id="yGr-b2-boi"/>
                         <outlet property="scoreLabel" destination="zoH-BW-qfx" id="5wP-fj-TrK"/>
-                        <outletCollection property="cardButtons" destination="oFN-Da-pFR" id="IRC-6p-ypP"/>
-                        <outletCollection property="cardButtons" destination="9yu-C9-2Zn" id="LWS-bo-R3x"/>
-                        <outletCollection property="cardButtons" destination="HIq-T3-oWV" id="uBW-Fd-L13"/>
-                        <outletCollection property="cardButtons" destination="oFN-Da-pFR" id="2Fw-Hb-Jd3"/>
-                        <outletCollection property="cardButtons" destination="sJT-Jz-CtE" id="xSy-Vn-hPh"/>
-                        <outletCollection property="cardButtons" destination="HIq-T3-oWV" id="M1N-L9-kln"/>
-                        <outletCollection property="cardButtons" destination="fFJ-Qi-6Jd" id="SP0-sp-3K8"/>
-                        <outletCollection property="cardButtons" destination="SSB-fo-10Z" id="T6b-g2-nYo"/>
-                        <outletCollection property="cardButtons" destination="3jm-yo-AB3" id="5Ug-xq-QoM"/>
-                        <outletCollection property="cardButtons" destination="dzq-hF-sWY" id="CEQ-RH-cDg"/>
-                        <outletCollection property="cardButtons" destination="9yu-C9-2Zn" id="pDP-9e-cRL"/>
-                        <outletCollection property="cardButtons" destination="nNs-mt-OOU" id="CWF-mU-eel"/>
-                        <outletCollection property="cardButtons" destination="Vet-PG-gqG" id="7A0-7b-TY8"/>
-                        <outletCollection property="cardButtons" destination="8v6-0v-KaI" id="tgn-J1-634"/>
-                        <outletCollection property="cardButtons" destination="FLs-pM-Xdd" id="Hg4-E8-nGF"/>
-                        <outletCollection property="cardButtons" destination="qbJ-fk-n5f" id="3kI-aq-i9T"/>
-                        <outletCollection property="cardButtons" destination="1VL-SP-GKF" id="Rwx-WU-Lif"/>
-                        <outletCollection property="cardButtons" destination="Xgg-KC-bsl" id="shq-5a-S8r"/>
-                        <outletCollection property="cardButtons" destination="Bfm-K7-QzJ" id="2Dx-Tg-QZ0"/>
+                        <outletCollection property="cardButtons" destination="oFN-Da-pFR" id="j7A-cn-9bA"/>
+                        <outletCollection property="cardButtons" destination="sJT-Jz-CtE" id="zpl-Uf-kwb"/>
+                        <outletCollection property="cardButtons" destination="HIq-T3-oWV" id="Qik-c7-ttx"/>
+                        <outletCollection property="cardButtons" destination="fFJ-Qi-6Jd" id="i9o-ts-OKp"/>
+                        <outletCollection property="cardButtons" destination="SSB-fo-10Z" id="9mJ-kv-cHm"/>
+                        <outletCollection property="cardButtons" destination="3jm-yo-AB3" id="k8n-Fj-JDt"/>
+                        <outletCollection property="cardButtons" destination="dzq-hF-sWY" id="F6L-Ra-eP8"/>
+                        <outletCollection property="cardButtons" destination="9yu-C9-2Zn" id="Ehj-P6-Qk5"/>
+                        <outletCollection property="cardButtons" destination="nNs-mt-OOU" id="YKT-aA-OSh"/>
+                        <outletCollection property="cardButtons" destination="Vet-PG-gqG" id="OMA-bY-ZkA"/>
+                        <outletCollection property="cardButtons" destination="8v6-0v-KaI" id="og7-zX-tPO"/>
+                        <outletCollection property="cardButtons" destination="FLs-pM-Xdd" id="hIA-ca-Mv3"/>
+                        <outletCollection property="cardButtons" destination="qbJ-fk-n5f" id="KTR-kl-gre"/>
+                        <outletCollection property="cardButtons" destination="1VL-SP-GKF" id="1vr-vy-JEG"/>
+                        <outletCollection property="cardButtons" destination="Xgg-KC-bsl" id="lQL-m3-mpT"/>
+                        <outletCollection property="cardButtons" destination="Bfm-K7-QzJ" id="XeQ-6m-98S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>

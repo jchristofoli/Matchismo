@@ -10,6 +10,7 @@
 
 @interface Card : NSObject
 
+- (id)copyWithZone:(NSZone *)zone;
 @property (strong, nonatomic) NSString *contents;
 @property (nonatomic, getter=isFaceUp) BOOL faceUp;
 @property (nonatomic, getter=isUnplayable) BOOL unplayable;
