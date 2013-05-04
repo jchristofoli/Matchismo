@@ -23,7 +23,6 @@
 		60FD4EE2172467E700DB4D5F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FD4EE1172467E700DB4D5F /* Default@2x.png */; };
 		60FD4EE4172467E700DB4D5F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FD4EE3172467E700DB4D5F /* Default-568h@2x.png */; };
 		60FD4EE7172467E700DB4D5F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60FD4EE5172467E700DB4D5F /* MainStoryboard_iPhone.storyboard */; };
-		60FD4EEA172467E700DB4D5F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60FD4EE8172467E700DB4D5F /* MainStoryboard_iPad.storyboard */; };
 		60FD4EED172467E700DB4D5F /* CardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD4EEC172467E700DB4D5F /* CardGameViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 		60FD4EE1172467E700DB4D5F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		60FD4EE3172467E700DB4D5F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		60FD4EE6172467E700DB4D5F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		60FD4EE9172467E700DB4D5F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		60FD4EEB172467E700DB4D5F /* CardGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardGameViewController.h; sourceTree = "<group>"; };
 		60FD4EEC172467E700DB4D5F /* CardGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardGameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +104,6 @@
 				60FD4EEC172467E700DB4D5F /* CardGameViewController.m */,
 				60FD4EF317246C4000DB4D5F /* Model */,
 				60FD4EE5172467E700DB4D5F /* MainStoryboard_iPhone.storyboard */,
-				60FD4EE8172467E700DB4D5F /* MainStoryboard_iPad.storyboard */,
 				60FD4ED4172467E700DB4D5F /* Supporting Files */,
 			);
 			path = Matchismo;
@@ -203,7 +200,6 @@
 				60FD4EE2172467E700DB4D5F /* Default@2x.png in Resources */,
 				60FD4EE4172467E700DB4D5F /* Default-568h@2x.png in Resources */,
 				60FD4EE7172467E700DB4D5F /* MainStoryboard_iPhone.storyboard in Resources */,
-				60FD4EEA172467E700DB4D5F /* MainStoryboard_iPad.storyboard in Resources */,
 				60D472BA1734C95D009F0356 /* volition-company-logo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,14 +239,6 @@
 				60FD4EE6172467E700DB4D5F /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		60FD4EE8172467E700DB4D5F /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				60FD4EE9172467E700DB4D5F /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -321,6 +309,7 @@
 				GCC_PREFIX_HEADER = "Matchismo/Matchismo-Prefix.pch";
 				INFOPLIST_FILE = "Matchismo/Matchismo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -332,6 +321,7 @@
 				GCC_PREFIX_HEADER = "Matchismo/Matchismo-Prefix.pch";
 				INFOPLIST_FILE = "Matchismo/Matchismo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
