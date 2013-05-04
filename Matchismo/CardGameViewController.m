@@ -63,7 +63,7 @@
 
     switch (self.game.lastFlipResult) {
         case CARD_MATCHING_GAME_STATUS_FLIPPED:
-            self.resultsLabel.text = [NSString stringWithFormat:@"Flipped up %@", self.game.lastPlayedCards[0]];
+            self.resultsLabel.text = [NSString stringWithFormat:@"Flipped up %@", [self.game.lastPlayedCards componentsJoinedByString:@" and "]];
             break;
         case CARD_MATCHING_GAME_STATUS_MISMATCH:
             self.resultsLabel.text = [NSString stringWithFormat:@"%@ don't match! %d point penalty!", [self.game.lastPlayedCards componentsJoinedByString:@" and "], self.game.lastFlipScore];
