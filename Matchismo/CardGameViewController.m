@@ -77,12 +77,12 @@
     }
 
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
 }
 
 - (void)setFlipCount:(int)flipCount
 {
     _flipCount = flipCount;
-    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
 }
 
 - (IBAction)flipCard:(UIButton *)sender
