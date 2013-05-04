@@ -11,6 +11,9 @@
 @interface CardMatchingGame()
 @property (strong, nonatomic) NSMutableArray *cards;
 @property (nonatomic) int score;
+@property (nonatomic) int lastFlipScore;
+@property (nonatomic) CardMatchingGameFlipResult lastFlipResult;
+@property (nonatomic, retain) NSArray* lastPlayedCards;
 @end
 
 @implementation CardMatchingGame
@@ -27,6 +30,8 @@
     
     if (self)
     {
+        self.lastFlipResult = CARD_MATCHING_GAME_STATUS_INVALID;
+
         for (int i = 0; i < cardCount; ++i)
         {
             Card *card = [deck drawRandomCard];
@@ -50,8 +55,13 @@
 
 - (void)flipCardAtIndex:(NSUInteger)index
 {
+    int flipScore = 0;
     Card *card = [self cardAtIndex:index];
-    
+
+    NSMutableArray *playedCards = [[NSMutableArray alloc] init];
+    [playedCards addObject:card];
+
+    self.lastFlipResult = CARD_MATCHING_GAME_STATUS_FLIPPED;
     if (card != nil && !card.isUnplayable)
     {
         if (!card.isFaceUp)
@@ -60,24 +70,32 @@
             {
                 if (card != otherCard && otherCard.isFaceUp && !otherCard.isUnplayable)
                 {
+                    [playedCards addObject:otherCard];
+
                     int matchScore = [card match:@[otherCard]];
                     if (matchScore > 0)
                     {
                         otherCard.unplayable = YES;
                         card.unplayable = YES;
-                        self.score += matchScore * MATCH_MULTIPLIER;
+                        flipScore = matchScore * MATCH_MULTIPLIER;
+                        self.lastFlipResult = CARD_MATCHING_GAME_STATUS_MATCH;
                     }
                     else
                     {
                         otherCard.faceUp = NO;
-                        self.score -= MISMATCH_PENALTY;
+                        flipScore -= MISMATCH_PENALTY;
+                        self.lastFlipResult = CARD_MATCHING_GAME_STATUS_MISMATCH;
                     }
                 }
             }
-            self.score -= FLIP_COST;
+            flipScore -= FLIP_COST;
         }
         card.faceUp = !card.isFaceUp;
     }
+
+    self.score += flipScore;
+    self.lastFlipScore = flipScore;
+    self.lastPlayedCards = playedCards;
 }
 
 - (Card *)cardAtIndex:(NSUInteger)index
