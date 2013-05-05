@@ -11,7 +11,7 @@
 @interface CardMatchingGame()
 @property (strong, nonatomic) NSMutableArray *history;
 @property (nonatomic, readonly) CardMatchingGameState *currentGameState;
-@property (nonatomic) int historyLocation;
+@property (nonatomic) NSUInteger historyLocation;
 @end
 
 @implementation CardMatchingGame
@@ -22,9 +22,9 @@
     return _history;
 }
 
-- (int)numFlips
+- (NSUInteger)historySize
 {
-    return self.history.count - 1;
+    return self.history.count;
 }
 
 - (int)score
@@ -71,17 +71,30 @@
     return self;
 }
 
+- (BOOL)changeHistoryLocation:(NSUInteger)historyLocation
+{
+    if (historyLocation <= self.historySize)
+    {
+        self.historyLocation = historyLocation;
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
+
 - (void)saveGameState
 {
     if (self.historyLocation < self.history.count - 1)
     {
-        [self.history removeObjectsInRange:NSMakeRange(self.historyLocation, self.history.count - self.historyLocation)];
+        [self.history removeObjectsInRange:NSMakeRange(self.historyLocation + 1, self.history.count - self.historyLocation - 1)];
     }
     [self.history addObject:[[CardMatchingGameState alloc] initWithPreviousState:self.history.lastObject]];
     self.historyLocation = self.history.count - 1;
 }
 
-#define FLIP_COST (1)
+#define FLIP_COST (0)
 #define MISMATCH_PENALTY (2)
 #define MATCH_MULTIPLIER (4)
 
@@ -98,6 +111,11 @@
     int flipScore = 0;
 
     card = [self cardAtIndex:index];
+    
+    if (card == nil)
+    {
+        return;
+    }
 
     NSMutableArray *playedCards = [[NSMutableArray alloc] init];
     [playedCards addObject:card];
@@ -129,7 +147,11 @@
                     }
                 }
             }
-            flipScore -= FLIP_COST;
+            
+            if (self.historyLocation > 1)
+            {
+                flipScore -= FLIP_COST;
+            }
         }
         card.faceUp = !card.isFaceUp;
     }

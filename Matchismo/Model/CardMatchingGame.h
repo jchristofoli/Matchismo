@@ -15,12 +15,13 @@
 - (id)initWithCardCount:(NSUInteger)cardCount usingDeck:(Deck*)deck;
 - (void)flipCardAtIndex:(NSUInteger)index;
 - (Card *)cardAtIndex:(NSUInteger)index;
+- (BOOL)changeHistoryLocation:(NSUInteger)historyLocation;
 
 @property (nonatomic, readonly) int score;
 @property (nonatomic, readonly) int lastFlipScore;
 @property (nonatomic, readonly) CardMatchingGameFlipResult lastFlipResult;
 @property (nonatomic, readonly) NSArray* lastPlayedCards;
-@property (nonatomic, readonly) int historyLocation;
-@property (nonatomic, readonly) int numFlips;
+@property (nonatomic, readonly) NSUInteger historyLocation;
+@property (nonatomic, readonly) NSUInteger historySize;
 
 @end

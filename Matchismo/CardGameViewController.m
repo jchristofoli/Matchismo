@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *resultsLabel;
 @property (weak, nonatomic) IBOutlet UIButton *dealButton;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+@property (weak, nonatomic) IBOutlet UISlider *historySlider;
 @property (strong, nonatomic) CardMatchingGame *game;
 @end
 
@@ -38,6 +39,19 @@
 
 - (void) viewDidAppear:(BOOL)animated
 {
+    self.historySlider.continuous = YES;
+    [self.historySlider addTarget:self
+               action:@selector(historySliderChanged:)
+     forControlEvents:UIControlEventValueChanged];
+    
+    [self updateUI];
+}
+
+-(IBAction)historySliderChanged:(UISlider *)sender
+{
+    int historyValue = (int)round(self.historySlider.value);
+    [self.historySlider setValue:historyValue animated:NO];
+    [self.game changeHistoryLocation:historyValue];
     [self updateUI];
 }
 
@@ -75,7 +89,21 @@
     }
 
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
-    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.game.numFlips];
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.game.historyLocation];
+    
+    self.historySlider.minimumValue = 0;
+    if (self.game.historySize <= 1)
+    {
+        self.historySlider.enabled = NO;
+        self.historySlider.maximumValue = 1;
+        self.historySlider.value = 0;
+    }
+    else
+    {
+        self.historySlider.enabled = YES;
+        self.historySlider.maximumValue = self.game.historySize - 1;
+        self.historySlider.value = self.game.historyLocation;
+    }
 }
 
 - (IBAction)flipCard:(UIButton *)sender
