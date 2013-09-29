@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		602CBD9017F7C6BF00E3DC2A /* CardGameScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602CBD8F17F7C6BF00E3DC2A /* CardGameScoreViewController.m */; };
+		602CBD9317F7C9FC00E3DC2A /* ScoresManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 602CBD9217F7C9FC00E3DC2A /* ScoresManager.m */; };
+		602CBD9617F7CA4C00E3DC2A /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 602CBD9517F7CA4C00E3DC2A /* GameScore.m */; };
 		60C59F4117334A7C00779C8D /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C59F4017334A7C00779C8D /* CardMatchingGame.m */; };
 		60C59F4A17334ACF00779C8D /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C59F4317334ACF00779C8D /* Card.m */; };
 		60C59F4B17334ACF00779C8D /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C59F4517334ACF00779C8D /* Deck.m */; };
@@ -29,6 +32,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		602CBD8E17F7C6BF00E3DC2A /* CardGameScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardGameScoreViewController.h; sourceTree = "<group>"; };
+		602CBD8F17F7C6BF00E3DC2A /* CardGameScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardGameScoreViewController.m; sourceTree = "<group>"; };
+		602CBD9117F7C9FC00E3DC2A /* ScoresManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoresManager.h; sourceTree = "<group>"; };
+		602CBD9217F7C9FC00E3DC2A /* ScoresManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoresManager.m; sourceTree = "<group>"; };
+		602CBD9417F7CA4C00E3DC2A /* GameScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScore.h; sourceTree = "<group>"; };
+		602CBD9517F7CA4C00E3DC2A /* GameScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScore.m; sourceTree = "<group>"; };
 		60C59F3F17334A7C00779C8D /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = Model/CardMatchingGame.h; sourceTree = "<group>"; };
 		60C59F4017334A7C00779C8D /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = Model/CardMatchingGame.m; sourceTree = "<group>"; };
 		60C59F4217334ACF00779C8D /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Model/Card.h; sourceTree = "<group>"; };
@@ -108,6 +117,8 @@
 			children = (
 				60FD4EEB172467E700DB4D5F /* CardGameViewController.h */,
 				60FD4EEC172467E700DB4D5F /* CardGameViewController.m */,
+				602CBD8E17F7C6BF00E3DC2A /* CardGameScoreViewController.h */,
+				602CBD8F17F7C6BF00E3DC2A /* CardGameScoreViewController.m */,
 				60FD4EF317246C4000DB4D5F /* Model */,
 				60FD4EE5172467E700DB4D5F /* MainStoryboard_iPhone.storyboard */,
 				60FD4ED4172467E700DB4D5F /* Supporting Files */,
@@ -136,6 +147,10 @@
 			isa = PBXGroup;
 			children = (
 				60C59F4217334ACF00779C8D /* Card.h */,
+				602CBD9417F7CA4C00E3DC2A /* GameScore.h */,
+				602CBD9517F7CA4C00E3DC2A /* GameScore.m */,
+				602CBD9117F7C9FC00E3DC2A /* ScoresManager.h */,
+				602CBD9217F7C9FC00E3DC2A /* ScoresManager.m */,
 				60C59F4317334ACF00779C8D /* Card.m */,
 				60C59F4417334ACF00779C8D /* Deck.h */,
 				60C59F4517334ACF00779C8D /* Deck.m */,
@@ -229,6 +244,9 @@
 				60C59F4C17334ACF00779C8D /* PlayingCard.m in Sources */,
 				60C59F4D17334ACF00779C8D /* PlayingCardDeck.m in Sources */,
 				60D472C017357FB7009F0356 /* CardMatchingGameState.m in Sources */,
+				602CBD9017F7C6BF00E3DC2A /* CardGameScoreViewController.m in Sources */,
+				602CBD9317F7C9FC00E3DC2A /* ScoresManager.m in Sources */,
+				602CBD9617F7CA4C00E3DC2A /* GameScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

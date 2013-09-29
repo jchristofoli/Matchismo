@@ -9,6 +9,8 @@
 #import "CardGameViewController.h"
 #import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
+#import "GameScore.h"
+#import "ScoresManager.h"
 
 #define CARD_BACK_IMAGE (@"card_back_red.jpg")
 
@@ -106,10 +108,31 @@
     }
 }
 
+- (BOOL) gameIsOver
+{
+    BOOL allCardsUnplayable = YES;
+    for (UIButton *cardButton in self.cardButtons)
+    {
+        Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
+        allCardsUnplayable &= card.isUnplayable;
+    }
+    
+    return allCardsUnplayable;
+}
 - (IBAction)flipCard:(UIButton *)sender
 {
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
     [self updateUI];
+    
+    if ([self gameIsOver])
+    {
+        GameScore *score = [[GameScore alloc] init];
+        score.endDate = [NSDate date];
+        score.score = self.game.score;
+        score.flips = self.game.historyLocation;
+        
+        [[ScoresManager sharedInstance] addScore:score];
+    }
 }
 
 - (IBAction)dealButtonTapped:(id)sender
