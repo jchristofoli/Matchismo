@@ -22,7 +22,16 @@
     [super viewWillAppear:animated];
     
     self.topScores = [[ScoresManager sharedInstance] getTopScores];
-    // Sort by top score.
+    
+    self.topScores = [self.topScores sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+        GameScore *first = (GameScore*)a;
+        GameScore *second = (GameScore*)b;
+        
+        if (first.score == second.score)
+            return first.flips >= second.flips;
+        else
+            return first.score < second.score;
+    }];
 }
 
 #pragma mark - Table view data source
@@ -45,7 +54,13 @@
 
         GameScore* score = self.topScores[indexPath.row];
         cell.textLabel.text = [NSString stringWithFormat:@"Score: %d Flips: %d", score.score, score.flips];
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"Date: %@", score.endDate];
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateStyle:NSDateFormatterLongStyle];
+        [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+        [dateFormatter setLocale:[NSLocale currentLocale]];
+
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [dateFormatter stringFromDate:score.endDate]];
         
         return cell;
     }
