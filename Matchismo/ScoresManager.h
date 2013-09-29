@@ -16,5 +16,6 @@
 
 - (void)addScore:(GameScore*)score;
 - (NSArray*)getTopScores;
+- (GameScore*)getHighScore:(NSArray*)scores;
 
 @end

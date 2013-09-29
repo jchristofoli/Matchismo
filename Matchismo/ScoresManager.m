@@ -60,4 +60,19 @@
     return scores;
 }
 
+- (GameScore*)getHighScore:(NSArray*)scores
+{
+    NSArray* sortedScores = [scores sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+        GameScore *first = (GameScore*)a;
+        GameScore *second = (GameScore*)b;
+        
+        if (first.score == second.score)
+            return first.flips >= second.flips;
+        else
+            return first.score < second.score;
+    }];
+    
+    return sortedScores[0];
+}
+
 @end

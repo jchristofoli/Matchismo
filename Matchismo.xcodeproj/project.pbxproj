@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		60134F4117F8A53D00217EC2 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60134F4017F8A53D00217EC2 /* libCorePlot-CocoaTouch.a */; };
 		60134F4317F8A55A00217EC2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60134F4217F8A55A00217EC2 /* QuartzCore.framework */; };
+		60134F4917F8A66300217EC2 /* CardGameScoreChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60134F4817F8A66300217EC2 /* CardGameScoreChartViewController.m */; };
 		602CBD9017F7C6BF00E3DC2A /* CardGameScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602CBD8F17F7C6BF00E3DC2A /* CardGameScoreViewController.m */; };
 		602CBD9317F7C9FC00E3DC2A /* ScoresManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 602CBD9217F7C9FC00E3DC2A /* ScoresManager.m */; };
 		602CBD9617F7CA4C00E3DC2A /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 602CBD9517F7CA4C00E3DC2A /* GameScore.m */; };
@@ -115,6 +116,8 @@
 		60134F3E17F8A4D200217EC2 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		60134F4017F8A53D00217EC2 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		60134F4217F8A55A00217EC2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		60134F4717F8A66300217EC2 /* CardGameScoreChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardGameScoreChartViewController.h; sourceTree = "<group>"; };
+		60134F4817F8A66300217EC2 /* CardGameScoreChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardGameScoreChartViewController.m; sourceTree = "<group>"; };
 		602CBD8E17F7C6BF00E3DC2A /* CardGameScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardGameScoreViewController.h; sourceTree = "<group>"; };
 		602CBD8F17F7C6BF00E3DC2A /* CardGameScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardGameScoreViewController.m; sourceTree = "<group>"; };
 		602CBD9117F7C9FC00E3DC2A /* ScoresManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoresManager.h; sourceTree = "<group>"; };
@@ -301,6 +304,8 @@
 				60FD4EEC172467E700DB4D5F /* CardGameViewController.m */,
 				602CBD8E17F7C6BF00E3DC2A /* CardGameScoreViewController.h */,
 				602CBD8F17F7C6BF00E3DC2A /* CardGameScoreViewController.m */,
+				60134F4717F8A66300217EC2 /* CardGameScoreChartViewController.h */,
+				60134F4817F8A66300217EC2 /* CardGameScoreChartViewController.m */,
 				60FD4EF317246C4000DB4D5F /* Model */,
 				60FD4EE5172467E700DB4D5F /* MainStoryboard_iPhone.storyboard */,
 				60FD4ED4172467E700DB4D5F /* Supporting Files */,
@@ -429,6 +434,7 @@
 				602CBD9017F7C6BF00E3DC2A /* CardGameScoreViewController.m in Sources */,
 				602CBD9317F7C9FC00E3DC2A /* ScoresManager.m in Sources */,
 				602CBD9617F7CA4C00E3DC2A /* GameScore.m in Sources */,
+				60134F4917F8A66300217EC2 /* CardGameScoreChartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
