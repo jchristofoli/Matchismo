@@ -200,7 +200,17 @@
             [yMinorLocations addObject:[NSDecimalNumber decimalNumberWithDecimal:CPTDecimalFromInteger(j)]];
         }
     }
-    y.axisLabels = yLabels;    
+    
+    CPTAxisLabel *label = [[CPTAxisLabel alloc] initWithText:[NSString stringWithFormat:@"%i", yMax] textStyle:y.labelTextStyle];
+    NSDecimal location = CPTDecimalFromInteger(yMax);
+    label.tickLocation = location;
+    label.offset = -y.majorTickLength - y.labelOffset;
+    if (label) {
+        [yLabels addObject:label];
+    }
+    [yMajorLocations addObject:[NSDecimalNumber decimalNumberWithDecimal:CPTDecimalFromInt(yMax)]];
+
+    y.axisLabels = yLabels;
     y.majorTickLocations = yMajorLocations;
     y.minorTickLocations = yMinorLocations;
 }
