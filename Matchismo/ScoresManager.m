@@ -72,7 +72,10 @@
             return first.score < second.score;
     }];
     
-    return sortedScores[0];
+    if (sortedScores.count > 0)
+        return sortedScores[0];
+    else
+        return nil;
 }
 
 @end
