@@ -41,6 +41,8 @@
 
 - (void) viewDidAppear:(BOOL)animated
 {
+    [self becomeFirstResponder];
+    
     self.historySlider.continuous = YES;
     [self.historySlider addTarget:self
                action:@selector(historySliderChanged:)
@@ -49,11 +51,26 @@
     [self updateUI];
 }
 
--(IBAction)historySliderChanged:(UISlider *)sender
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self resignFirstResponder];
+}
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void)historySliderChanged:(UISlider *)sender
 {
     int historyValue = (int)round(self.historySlider.value);
-    [self.historySlider setValue:historyValue animated:NO];
-    [self.game changeHistoryLocation:historyValue];
+    [self changeHistoryLocation:historyValue];
+}
+
+- (void)changeHistoryLocation:(NSUInteger)historyLocation
+{
+    [self.historySlider setValue:historyLocation animated:NO];
+    [self.game changeHistoryLocation:historyLocation];
     [self updateUI];
 }
 
@@ -139,6 +156,17 @@
 {
     [self resetGame];
     [self updateUI];
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        if (self.game.historyLocation > 0) {
+            int newhistoryLocation = self.game.historyLocation - 1;
+            [self changeHistoryLocation:newhistoryLocation];
+        }
+    }
 }
 
 @end
