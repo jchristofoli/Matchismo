@@ -43,26 +43,32 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.topScores.count;
+    return MAX(self.topScores.count, 1);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     @try {
-        static NSString *CellIdentifier = @"ScoreCell";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-
-        GameScore* score = self.topScores[indexPath.row];
-        cell.textLabel.text = [NSString stringWithFormat:@"Score: %d Flips: %d", score.score, score.flips];
-        
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateStyle:NSDateFormatterLongStyle];
-        [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-        [dateFormatter setLocale:[NSLocale currentLocale]];
-
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [dateFormatter stringFromDate:score.endDate]];
-        
-        return cell;
+        if (self.topScores.count == 0) {
+            static NSString *CellIdentifier = @"NoScoresCell";
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+            return cell;
+        } else {
+            static NSString *CellIdentifier = @"ScoreCell";
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+            
+            GameScore* score = self.topScores[indexPath.row];
+            cell.textLabel.text = [NSString stringWithFormat:@"Score: %d Flips: %d", score.score, score.flips];
+            
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateStyle:NSDateFormatterLongStyle];
+            [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+            [dateFormatter setLocale:[NSLocale currentLocale]];
+            
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [dateFormatter stringFromDate:score.endDate]];
+            
+            return cell;
+        }
     }
     @catch (NSException * e) {
         NSLog(@"Exception: %@", e);
