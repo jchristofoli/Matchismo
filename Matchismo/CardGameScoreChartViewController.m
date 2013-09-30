@@ -49,6 +49,8 @@
     self.hostView = [(CPTGraphHostingView *) [CPTGraphHostingView alloc] initWithFrame:self.view.bounds];
     self.hostView.allowPinchScaling = YES;
     [self.view addSubview:self.hostView];
+    
+    self.hostView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 }
 
 -(void)configureGraph {
