@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oFN-Da-pFR">
-                                <rect key="frame" x="25" y="55" width="52" height="70"/>
+                                <rect key="frame" x="20" y="55" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sJT-Jz-CtE">
-                                <rect key="frame" x="100" y="55" width="52" height="70"/>
+                                <rect key="frame" x="95" y="55" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HIq-T3-oWV">
-                                <rect key="frame" x="175" y="55" width="52" height="70"/>
+                                <rect key="frame" x="170" y="55" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -70,7 +70,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fFJ-Qi-6Jd">
-                                <rect key="frame" x="250" y="55" width="52" height="70"/>
+                                <rect key="frame" x="245" y="55" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -82,7 +82,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SSB-fo-10Z">
-                                <rect key="frame" x="25" y="132" width="52" height="70"/>
+                                <rect key="frame" x="20" y="132" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -94,7 +94,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3jm-yo-AB3">
-                                <rect key="frame" x="100" y="132" width="52" height="70"/>
+                                <rect key="frame" x="95" y="132" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -106,7 +106,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dzq-hF-sWY">
-                                <rect key="frame" x="175" y="132" width="52" height="70"/>
+                                <rect key="frame" x="170" y="132" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -118,7 +118,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9yu-C9-2Zn">
-                                <rect key="frame" x="250" y="132" width="52" height="70"/>
+                                <rect key="frame" x="245" y="132" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -130,7 +130,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nNs-mt-OOU">
-                                <rect key="frame" x="25" y="209" width="52" height="70"/>
+                                <rect key="frame" x="20" y="209" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -142,7 +142,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vet-PG-gqG">
-                                <rect key="frame" x="100" y="209" width="52" height="70"/>
+                                <rect key="frame" x="95" y="209" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -154,7 +154,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8v6-0v-KaI">
-                                <rect key="frame" x="175" y="209" width="52" height="70"/>
+                                <rect key="frame" x="170" y="209" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -166,7 +166,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FLs-pM-Xdd">
-                                <rect key="frame" x="250" y="209" width="52" height="70"/>
+                                <rect key="frame" x="245" y="209" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -178,7 +178,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qbJ-fk-n5f">
-                                <rect key="frame" x="25" y="286" width="52" height="70"/>
+                                <rect key="frame" x="20" y="286" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -190,7 +190,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1VL-SP-GKF">
-                                <rect key="frame" x="100" y="286" width="52" height="70"/>
+                                <rect key="frame" x="95" y="286" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -202,7 +202,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xgg-KC-bsl">
-                                <rect key="frame" x="175" y="286" width="52" height="70"/>
+                                <rect key="frame" x="170" y="286" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -214,7 +214,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bfm-K7-QzJ">
-                                <rect key="frame" x="250" y="286" width="52" height="70"/>
+                                <rect key="frame" x="245" y="286" width="60" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
                                 <state key="normal" image="card_back_red.jpg">
@@ -372,21 +372,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="card_back_red.jpg" width="700" height="965"/>
-        <image name="card_back_red.jpg" width="700" height="965"/>
-        <image name="card_back_red.jpg" width="700" height="965"/>
-        <image name="card_back_red.jpg" width="700" height="965"/>
-        <image name="card_back_red.jpg" width="700" height="965"/>
-        <image name="card_back_red.jpg" width="700" height="965"/>
-        <image name="card_back_red.jpg" width="700" height="965"/>
-        <image name="card_back_red.jpg" width="700" height="965"/>
-        <image name="card_back_red.jpg" width="700" height="965"/>
-        <image name="card_back_red.jpg" width="700" height="965"/>
-        <image name="card_back_red.jpg" width="700" height="965"/>
-        <image name="card_back_red.jpg" width="700" height="965"/>
-        <image name="card_back_red.jpg" width="700" height="965"/>
-        <image name="card_back_red.jpg" width="700" height="965"/>
-        <image name="card_back_red.jpg" width="700" height="965"/>
         <image name="card_back_red.jpg" width="700" height="965"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
