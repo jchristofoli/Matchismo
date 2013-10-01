@@ -23,13 +23,16 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UISlider *historySlider;
 @property (strong, nonatomic) CardMatchingGame *game;
+@property (nonatomic) BOOL scoreRecorded;
+@property (strong, nonatomic) UIAlertView *gameOverAlert;
 @end
 
 @implementation CardGameViewController
 
 - (void)resetGame
 {
-    _game = nil;
+    self.game = nil;
+    self.scoreRecorded = NO;
 }
 
 - (CardMatchingGame *)game
@@ -143,12 +146,14 @@
     
     if ([self gameIsOver])
     {
-        GameScore *score = [[GameScore alloc] init];
-        score.endDate = [NSDate date];
-        score.score = self.game.score;
-        score.flips = self.game.historyLocation;
-        
-        [[ScoresManager sharedInstance] addScore:score];
+        if (!self.scoreRecorded) {
+            self.gameOverAlert = [[UIAlertView alloc] initWithTitle:@"Game Over"
+                                                            message:@"Record Score?"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:@"Cancel", nil];
+            [self.gameOverAlert show];
+        }
     }
 }
 
@@ -165,6 +170,22 @@
         if (self.game.historyLocation > 0) {
             int newhistoryLocation = self.game.historyLocation - 1;
             [self changeHistoryLocation:newhistoryLocation];
+        }
+    }
+}
+
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView == self.gameOverAlert) {
+        if (buttonIndex == 0) {
+            GameScore *score = [[GameScore alloc] init];
+            score.endDate = [NSDate date];
+            score.score = self.game.score;
+            score.flips = self.game.historyLocation;
+        
+            [[ScoresManager sharedInstance] addScore:score];
+            
+            self.scoreRecorded = YES;
         }
     }
 }
