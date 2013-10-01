@@ -31,7 +31,7 @@
         GameScore *first = (GameScore*)a;
         GameScore *second = (GameScore*)b;
         
-        return [first.endDate compare:second.endDate] == NSOrderedAscending;
+        return [first.endDate compare:second.endDate] == NSOrderedDescending;
     }];
 
     [self initPlot];
