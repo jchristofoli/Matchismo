@@ -60,7 +60,7 @@
     return scores;
 }
 
-- (GameScore*)getHighScore:(NSArray*)scores
++ (NSArray*) sortScores:(NSArray*)scores
 {
     NSArray* sortedScores = [scores sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
         GameScore *first = (GameScore*)a;
@@ -72,8 +72,23 @@
             return first.score < second.score;
     }];
     
+    return sortedScores;
+}
+
++ (GameScore*)getHighScore:(NSArray*)scores
+{
+    NSArray* sortedScores = [[self class] sortScores:scores];
     if (sortedScores.count > 0)
         return sortedScores[0];
+    else
+        return nil;
+}
+
++ (GameScore*)getLowScore:(NSArray*)scores
+{
+    NSArray* sortedScores = [[self class] sortScores:scores];
+    if (sortedScores.count > 0)
+        return sortedScores[sortedScores.count - 1];
     else
         return nil;
 }

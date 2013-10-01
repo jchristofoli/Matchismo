@@ -182,7 +182,7 @@
     NSInteger majorIncrement = 10;
     NSInteger minorIncrement = 5;
     
-    GameScore* topScore = [[ScoresManager sharedInstance] getHighScore:self.topScores];
+    GameScore* topScore = [ScoresManager getHighScore:self.topScores];
     NSInteger yMax = topScore ? topScore.score : 1;
     NSMutableSet *yLabels = [NSMutableSet set];
     NSMutableSet *yMajorLocations = [NSMutableSet set];
@@ -203,14 +203,24 @@
         }
     }
     
-    CPTAxisLabel *label = [[CPTAxisLabel alloc] initWithText:[NSString stringWithFormat:@"%i", yMax] textStyle:y.labelTextStyle];
-    NSDecimal location = CPTDecimalFromInteger(yMax);
+    CPTAxisLabel *label = [[CPTAxisLabel alloc] initWithText:[NSString stringWithFormat:@"%i", topScore.score] textStyle:y.labelTextStyle];
+    NSDecimal location = CPTDecimalFromInteger(topScore.score);
     label.tickLocation = location;
     label.offset = -y.majorTickLength - y.labelOffset;
     if (label) {
         [yLabels addObject:label];
     }
-    [yMajorLocations addObject:[NSDecimalNumber decimalNumberWithDecimal:CPTDecimalFromInt(yMax)]];
+    [yMajorLocations addObject:[NSDecimalNumber decimalNumberWithDecimal:CPTDecimalFromInt(topScore.score)]];
+    
+    GameScore* lowScore = [ScoresManager getLowScore:self.topScores];
+    label = [[CPTAxisLabel alloc] initWithText:[NSString stringWithFormat:@"%i", lowScore.score] textStyle:y.labelTextStyle];
+    location = CPTDecimalFromInteger(lowScore.score);
+    label.tickLocation = location;
+    label.offset = -y.majorTickLength - y.labelOffset;
+    if (label) {
+        [yLabels addObject:label];
+    }
+    [yMajorLocations addObject:[NSDecimalNumber decimalNumberWithDecimal:CPTDecimalFromInt(lowScore.score)]];
 
     y.axisLabels = yLabels;
     y.majorTickLocations = yMajorLocations;
